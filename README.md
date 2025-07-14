@@ -265,7 +265,7 @@ This diverse and talented team of professionals came together during the hackath
   *Architect / Tech Program Manager*  
   Formerly at Deloitte Cyber / AI
   
-  - **Motsim Aslam**  
+- **Motsim Aslam**  
   *AI/ ML & Gen AI Developer / Data Scientist*  
   Red Wireless & Beta Ambassador  
 
@@ -284,7 +284,7 @@ This diverse and talented team of professionals came together during the hackath
   *AI Coding Sleeper*  
   Formerly at GM & JP Morgan Chase
   
-  - **Umar Mazhar**  
+- **Umar Mazhar**  
   *AI Researcher / Developer / ML Engineer* 
 
 ---
@@ -322,9 +322,9 @@ Now your agent is live on the GenAI platform and accessible at:
 
 ---
 
+---
 
-
-
+# Credit Goes To
 --------------------------------------------------------------------
 # 🐍 GenAI Agents Infrastructure
 
