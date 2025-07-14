@@ -263,10 +263,11 @@ This diverse and talented team of professionals came together during the hackath
 
 - **Yehya Karout**  
   *Architect / Tech Program Manager*  
-  Formerly at Deloitte Cyber / AI  
-
-- **Umar Mazhar**  
-  *AI Researcher / Developer / ML Engineer*  
+  Formerly at Deloitte Cyber / AI
+  
+  - **Motsim Aslam**  
+  *AI/ ML & Gen AI Developer / Data Scientist*  
+  Red Wireless & Beta Ambassador  
 
 - **Dr. Chantal Spleiss**  
   *Architect / Product / Compliance*  
@@ -277,15 +278,14 @@ This diverse and talented team of professionals came together during the hackath
   Northern Gas Net / Ipsos MORI  
 
 - **Obaid Ullah Safi**  
-  *Developer / AI/ML Engineer*  
-
-- **Motsim Aslam**  
-  *Developer / Data Scientist*  
-  Red Wireless & Beta Ambassador  
+  *Developer / AI/ML Engineer*   
 
 - **Carrie Smith**  
   *AI Coding Sleeper*  
-  Formerly at GM & JP Morgan Chase  
+  Formerly at GM & JP Morgan Chase
+  
+  - **Umar Mazhar**  
+  *AI Researcher / Developer / ML Engineer* 
 
 ---
 
