@@ -1,3 +1,285 @@
+
+# 🏥 MediGuard: Multi-Agent Medical Analysis System using GenAI AgentOS
+
+> Made with ❤️ by the **Hackathon Dream Team – LeadWith AIAgents (GenAI Community)**  
+> 📫 Contact us: HackathonDreamTeam@rockingwoldtechnologies.com
+
+---
+
+## 🧩 Project Description
+
+**MediGuard** is a secure, multi-agent medical AI system built on [GenAI AgentOS](https://github.com/genai-works-org/getting-started-genai-agentos).  
+It uses AI-powered agents to extract, summarize, evaluate, and coordinate responses for healthcare data such as medical reports, lab results, and scanned PDFs.
+
+---
+
+## 🚑 Real-Life Problem
+
+Doctors often receive lengthy, unstructured patient reports, making it difficult to:
+- Understand urgent risks instantly
+- Prioritize patients
+- Coordinate care across systems
+
+---
+
+## 💡 Our Solution
+
+MediGuard deploys **three AI agents** that:
+- 🧠 Extract and summarize reports
+- ⚖️ Evaluate clinical context and confidence
+- 🤝 Coordinate decisions and next actions
+
+Each agent operates independently but communicates via secure, session-bound messages.
+
+---
+
+## 🔄 Multi-Agent Architecture
+
+![Agent Workflow](WORKFLOW.png)
+
+
+---
+
+## 🔄 Multi-Agent Architecture
+
+This diagram explains how the agents (EAS → MEVAL → DEC) interact with each other and handle responses based on medical data analysis and confidence scoring.
+
+![🧠 MediGuard Agent Workflow](WORKFLOW.png)
+
+---
+
+## 🤖 Agent Responsibilities
+
+### ✅ Agent 1 – `EASAgent` (`llamaindex_file_chat`)
+- Accepts file uploads (PDFs, DOCs, images)
+- Extracts text using LlamaParse or fallback OCR
+- Generates:
+  - Emergency summary
+  - Mid-level clinical summary
+  - Full structured report
+- Forwards output to MEVALAgent
+
+> ℹ️ Uses OpenAI GPT-4o + LlamaIndex  
+> 🔑 Requires API key from https://cloud.llamaindex.ai/
+
+---
+
+### ✅ Agent 2 – `MEVALAgent`
+- Evaluates health summaries from EAS
+- Calculates confidence score
+- Triggers internal lookup if confidence is low
+- Provides actionable advice to DEC agent
+
+---
+
+### ✅ Agent 3 – `DECAgent`
+- Makes final decision:
+  - High confidence → PDF summary response
+  - Low confidence → re-investigation / no response
+- Coordinates next steps or alerts
+
+---
+
+## ⚙️ How to Run Locally
+
+### 📦 Prerequisites
+
+Ensure the following are installed:
+- Python 3.10+
+- Docker
+- Git
+- `uv` (optional, recommended for agent CLI)
+
+---
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/MotsimAslam/MedContextAI.git
+cd genai-agentos
+```
+
+---
+
+### 2️⃣ Setup Python Virtual Environment
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate     # On Windows
+# OR
+source .venv/bin/activate    # On macOS/Linux
+```
+
+---
+
+### 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 🐳 Run the Platform Locally
+
+Make sure Docker is running, then:
+
+```bash
+docker-compose up --build
+```
+
+---
+
+## 🧠 Create and Use Your Agent (CLI Workflow)
+
+### 👤 Create a User
+
+```bash
+python cli.py signup -u yourusername
+# You'll be prompted for a password
+```
+
+---
+
+### 🔐 Login
+
+```bash
+python cli.py login -u yourusername -p yourpassword
+```
+
+---
+
+### 📝 Register an Agent
+
+```bash
+python cli.py register_agent --name easagent --description "Extracts and summarizes health record data"
+```
+
+This creates a new agent script inside the `cli/agents/` folder.
+
+---
+
+### 🔄 Sync and Deploy Your Agent
+
+```bash
+uv sync
+uv sync --active
+uv run easagent.py
+```
+
+After registration, a JWT token will be auto-generated in the new agent file. Copy it into your working agent code to authorize it.
+
+Then re-sync and run:
+
+```bash
+uv sync --active
+uv run llamaindex_file_chat.py
+```
+
+> You can now test your agent at: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 📥 Upload Medical Reports
+
+1. Sign in on the GenAI UI
+2. Choose agent `llamaindex_file_chat`
+3. Upload a PDF/image/text file
+4. Select your preferred summary type:
+   - Emergency Summary
+   - Full Clinical Insight
+   - Extended Investigation
+
+---
+
+## 📚 Required Libraries
+
+```
+llama-index
+llama-parse
+openai
+pdfplumber
+pytesseract
+Pillow
+reportlab
+python-dotenv
+genai-agentos
+```
+
+---
+
+## 🔐 API Setup (LlamaIndex)
+
+If you're using `llamaindex_file_chat`, you’ll need a LlamaParse API key:  
+📎 https://cloud.llamaindex.ai/
+
+---
+
+## 🛡 Disclaimer
+
+> ⚠️ This project is for research and prototyping only.  
+> It is not intended for direct clinical decision-making.  
+> Always consult licensed professionals.
+
+---
+
+## 📦 This Repository Has Been Submitted
+
+This repo is a submitted GenAI Hackathon project.
+
+✅ Built and tested on GenAI AgentOS  
+✅ Docker-compatible  
+✅ Works with uploaded PDF/image health records
+
+---
+
+## ❤️ Made With Love
+
+By **Hackathon Dream Team – LeadWith AIAgents (GenAI Community)**  
+📫 Contact us: HackathonDreamTeam@rockingwoldtechnologies.com
+
+---
+
+## 📚 Reference Example
+
+🧩 For guidance on the GenAI AgentOS structure and CLI usage, check the official GenAI sample repository:
+
+👉 [https://github.com/genai-works-org/getting-started-genai-agentos](https://github.com/genai-works-org/getting-started-genai-agentos)
+
+---
+
+## 🛠️ Important: Register Your Agent Using This Repo
+
+After cloning our repo, you must:
+
+1. Register the agent using the GenAI AgentOS CLI.  
+   This will create a new agent directory and generate a unique **JWT token**.
+
+2. Copy that JWT token and replace it in your agent’s original source file (like `llamaindex_file_chat.py`) inside our repo.
+
+```python
+# Example:
+AGENT_JWT = "your-new-generated-jwt-token"
+```
+
+3. Copy the new generated agent Python file code and replace your existing agent's code with it if changes exist.
+
+4. Run the following to sync and deploy:
+
+```bash
+uv sync --active
+uv run llamaindex_file_chat.py
+```
+
+Now your agent is live on the GenAI platform and accessible at:
+👉 [http://localhost:3000](http://localhost:3000)
+
+---
+
+
+
+
+--------------------------------------------------------------------
 # 🐍 GenAI Agents Infrastructure
 
 This repository provides the complete infrastructure for running GenAI agents, including:
