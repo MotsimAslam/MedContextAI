@@ -44,7 +44,7 @@ Each agent operates independently but communicates via secure, session-bound mes
 
 This diagram explains how the agents (EAS → MEVAL → DEC) interact with each other and handle responses based on medical data analysis and confidence scoring.
 
-![🧠 MediGuard Agent Workflow](Agents Workflow.png)
+![🧠 MediGuard Agent Workflow](Agents%20Workflow.png)
 
 ---
 
@@ -247,7 +247,53 @@ By **Hackathon Dream Team – LeadWith AIAgents (GenAI Community)**
 👉 [https://github.com/genai-works-org/getting-started-genai-agentos](https://github.com/genai-works-org/getting-started-genai-agentos)
 
 ---
+# 🧑‍💻 Hackathon Dream Team
 
+![Hackathon Dream Team](Hackathon%20Dream%20Team.jpg)
+
+## Meet the Team
+
+This diverse and talented team of professionals came together during the hackathon to develop cutting-edge AI solutions. With expertise spanning AI research, ML engineering, data science, compliance, product architecture, and program management, this dream team was built to innovate.
+
+### Team Members
+
+- **Sean Krepp**  
+  *Product / Program*  
+  Formerly at Google Data / AI  
+
+- **Yehya Karout**  
+  *Architect / Tech Program Manager*  
+  Formerly at Deloitte Cyber / AI  
+
+- **Umar Mazhar**  
+  *AI Researcher / Developer / ML Engineer*  
+
+- **Dr. Chantal Spleiss**  
+  *Architect / Product / Compliance*  
+  AI Strategist, Author & Speaker  
+
+- **Nathan Ekanem**  
+  *AI Researcher / Strategist*  
+  Northern Gas Net / Ipsos MORI  
+
+- **Obaid Ullah Safi**  
+  *Developer / AI/ML Engineer*  
+
+- **Motsim Aslam**  
+  *Developer / Data Scientist*  
+  Red Wireless & Beta Ambassador  
+
+- **Carrie Smith**  
+  *AI Coding Sleeper*  
+  Formerly at GM & JP Morgan Chase  
+
+---
+
+## 👥 Collaboration and Innovation
+
+Each team member brought their unique strengths to the table, making this collaboration not only effective but also inspiring. Together, we tackled real-world AI challenges and built solutions that matter.
+
+---
 ## 🛠️ Important: Register Your Agent Using This Repo
 
 After cloning our repo, you must:
