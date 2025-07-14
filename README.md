@@ -44,7 +44,7 @@ Each agent operates independently but communicates via secure, session-bound mes
 
 This diagram explains how the agents (EAS → MEVAL → DEC) interact with each other and handle responses based on medical data analysis and confidence scoring.
 
-![🧠 MediGuard Agent Workflow](WORKFLOW.png)
+![🧠 MediGuard Agent Workflow](Agents Workflow.png)
 
 ---
 
